@@ -10,10 +10,12 @@ mat-card {
   align-content: center;
   border-color:black !important;
   margin: auto;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+  height: 120px;
  
 
   mat-card-title{
+    margin-top: 20px;
     font-size: 1.3em;
   }
   a{

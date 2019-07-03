@@ -49,9 +49,7 @@ export class ForYouComponent implements OnInit {
           this.ngZone.run(() => {
             this.articles = res;
           });
-
         }
-
       },
         (error) => {
           console.log(error);

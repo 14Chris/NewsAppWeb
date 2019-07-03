@@ -9,7 +9,7 @@
     <mat-form-field>
       <input matInput id="password" [(ngModel)]="model.password" name="password" placeholder="Mot de passe"
         [type]="hide ? 'password' : 'text'">
-      <button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+      <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
         [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
