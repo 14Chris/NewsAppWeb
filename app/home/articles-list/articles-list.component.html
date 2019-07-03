@@ -1,0 +1,26 @@
+<div class="div-page">
+    <div class="category-title">
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==1" [icon]="faGlobe"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==2" [icon]="faVolleyballBall"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==3" [icon]="faVoteYea"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==4" [icon]="faMapMarkerAlt"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==5" [icon]="faFlask"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==6" [icon]="faMicrochip"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==7" [icon]="faEuroSign"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==8" [icon]="faHeartbeat"></fa-icon>
+        <fa-icon class="fa-fw" *ngIf="selectedCategory && selectedCategory.id==9" [icon]="faFilm"></fa-icon>
+        <span *ngIf="selectedCategory">{{selectedCategory.libelle}}</span>
+    </div>
+
+    <!-- Div pour affichage des articles -->
+    <div *ngIf="articles && articles.length > 0">
+        <div *ngFor="let article of articles">
+            <app-article [article]="article"></app-article>
+        </div>
+    </div>
+
+    <!-- Div pour affichage d'un spinner lors du chargement des articles -->
+    <div *ngIf="!articles || articles.length == 0">
+        <mat-spinner></mat-spinner>
+    </div>
+</div>

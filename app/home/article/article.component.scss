@@ -1,0 +1,46 @@
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+mat-card {
+  background-color: white;
+  color:#252525 !important;
+  //width: 75%;
+  align-content: center;
+  border-color:black !important;
+  margin: auto;
+  margin-bottom: 15px;
+ 
+
+  mat-card-title{
+    font-size: 1.3em;
+  }
+  a{
+    color:#252525 !important;
+    text-decoration: none;
+    :hover{
+      text-decoration:#252525;
+    }
+  }
+}
+
+.div-img-article{
+  right:10px;
+  width: 25%;
+  height: 70px;
+  margin: 0px 0px 5px 5px;
+  text-align: left;
+}
+
+img{
+  border-radius: 5px;
+  height: 100%;
+}
+
+
+.titles-article{
+  float: left; 
+  left:10px;
+  width: 75%;
+}

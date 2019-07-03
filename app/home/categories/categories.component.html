@@ -1,0 +1,31 @@
+<mat-list>
+  <mat-list-item [class.is-active]="selectedCategory && selectedCategory.id == -1" routerLink="">
+      <fa-icon class="fa-fw" [icon]="faNewspaper"></fa-icon>
+      <span>A la une</span>
+  </mat-list-item>
+  <mat-list-item [class.is-active]="selectedCategory && selectedCategory.id == -2" routerLink="/articles/foryou">
+    <fa-icon class="fa-fw" [icon]="faUserAlt"></fa-icon>
+    <span>Pour vous</span>
+  </mat-list-item>
+  <mat-list-item  [class.is-active]="selectedCategory && selectedCategory.id == -3" routerLink="/articles/favorites">
+    <fa-icon class="fa-fw" [icon]="faStar"></fa-icon>
+    <span>Favoris</span>
+  </mat-list-item>
+</mat-list>
+
+<mat-divider></mat-divider>
+<mat-list>
+  <mat-list-item (click)="CategoryClick($event)" *ngFor="let category of categories" id="{{category.id}}" [class.is-active]="selectedCategory && category.id == selectedCategory.id"> 
+    <fa-icon class="fa-fw" *ngIf="category.id==1" [icon]="faGlobe"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==2" [icon]="faVolleyballBall"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==3" [icon]="faVoteYea"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==4" [icon]="faMapMarkerAlt"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==5" [icon]="faFlask"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==6" [icon]="faMicrochip"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==7" [icon]="faEuroSign"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==8" [icon]="faHeartbeat"></fa-icon>
+    <fa-icon class="fa-fw" *ngIf="category.id==9" [icon]="faFilm"></fa-icon>
+
+    <span>{{category.libelle}}</span>
+  </mat-list-item>
+</mat-list>

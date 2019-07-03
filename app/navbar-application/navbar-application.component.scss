@@ -1,0 +1,64 @@
+$mdc-theme-primary: #1565c0; // primary color
+$mdc-theme-secondary: #388e3c; // secondary color
+
+@import "~@angular-mdc/theme/material";
+
+mat-toolbar{
+  background-color: lightskyblue !important;
+  position: relative;
+  z-index: 2;
+  height: 75px;
+  font-size: 1.5em;
+}
+  
+#icon-search{
+  color:rgb(34, 104, 255);
+  z-index: 1.1;
+  margin: auto 0;
+  margin-right:10px !important; 
+}
+
+.search-bar{
+  margin: 0 auto;
+  width:40%;
+  border-radius: 0.5rem !important;  
+  background-color: whitesmoke !important;
+  border-color:whitesmoke !important;
+  display: flex;
+}
+
+.article-search{
+  margin-left:20px !important; 
+  flex:1;
+  background-color: whitesmoke !important;
+  width: 40%;
+  width: 80%;
+  cursor: text;
+  border:none;
+  height:50px;
+  margin: 0 auto;
+  border-radius: 0.5rem !important;  
+  border-color:whitesmoke !important;
+  margin: auto 0;
+
+}
+
+.article-search:focus{
+  outline: none;
+}
+
+button{
+  margin-right: 15px;
+}
+
+#icon-profil-utilisateur{
+  cursor: pointer;
+}
+
+
+.mat-menu-content{
+  button{
+    margin: 0 auto;
+    width: 100% !important;
+  }
+}

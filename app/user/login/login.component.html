@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-progress-bar *ngIf="isLoading == true" mode="indeterminate"></mat-progress-bar>
+  <h2>Connexion</h2>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input id="login" [(ngModel)]="model.login" name="login" matInput placeholder="Login">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput id="password" [(ngModel)]="model.password" name="password" placeholder="Mot de passe"
+        [type]="hide ? 'password' : 'text'">
+      <button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button id="btn-login" type="submit" mat-flat-button>Se connecter</button>
+  </form>
+
+  <button id="btn-register" routerLink="register" mat-flat-button>S'enregistrer</button>
+</mat-card>

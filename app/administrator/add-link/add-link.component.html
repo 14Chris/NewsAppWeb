@@ -1,0 +1,17 @@
+<div>
+  <form (ngSubmit)="OnSubmit()">
+    <mat-form-field>
+      <input id="link" [(ngModel)]="model.link" name="link" matInput placeholder="Lien">
+    </mat-form-field>
+    <select id="category" [(ngModel)]="model.id_category" name="category">
+      <option *ngFor="let category of categories" [value]="category.id">{{category.libelle}}</option>
+    </select>
+
+    <select id="source" [(ngModel)]="model.id_source" name="source">
+      <option *ngFor="let source of sources" [value]="source.id">{{source.name}}</option>
+    </select>
+
+    <button id="btn-add-link" type="submit" mat-flat-button>Ajouter</button>
+
+  </form>
+</div>

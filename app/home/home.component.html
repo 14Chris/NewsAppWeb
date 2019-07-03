@@ -1,0 +1,9 @@
+<app-navbar-application [search]="search" [user]="connectedUser"></app-navbar-application>
+
+<div class="container-flex">
+  <app-categories [selectedCategory]="selectedCategory"></app-categories>
+  <div class="div-router">
+      <router-outlet></router-outlet>
+  </div>
+  
+</div>

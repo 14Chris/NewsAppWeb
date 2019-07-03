@@ -1,0 +1,38 @@
+
+mat-list-item{
+    color:#252525 !important;
+    font-size: 20px !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;    
+    margin-bottom: 10px;
+
+    fa-icon{
+        margin-right: 5px;
+        width: 40px;
+    }
+    cursor: pointer;
+     
+
+}
+
+mat-list-item:hover{
+    color:lightskyblue !important;
+ }
+
+mat-list{
+    overflow-y: auto;
+
+}
+
+mat-divider{
+    background-color: lightgrey;
+    margin-left: 15px;
+}
+
+mat-list-item.is-active{
+    background-color: lightskyblue !important;
+    color:whitesmoke !important;
+    :hover{
+        color:whitesmoke !important;
+    }
+}

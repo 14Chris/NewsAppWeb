@@ -1,0 +1,23 @@
+.container-flex{
+  display:flex;
+  flex-direction:row;
+
+  app-articles-list{
+  
+    margin-left: 70px;
+    margin-right: 70px;
+
+    overflow-y: auto;
+  }
+  
+  app-categories{
+    width:300px;
+    margin-top:20px;
+  }
+
+  .div-router{
+    flex:1;
+  }
+}
+
+

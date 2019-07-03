@@ -1,0 +1,77 @@
+<mat-card>
+    <mat-progress-bar *ngIf="isLoading == true" mode="indeterminate"></mat-progress-bar>
+    <h2>Création d'un compte</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input id="nom" formControlName="nom" name="nom" matInput placeholder="Nom" required="required">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input id="prenom" formControlName="prenom" name="prenom" matInput placeholder="Prénom" required="required">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input id="email" formControlName="email" name="email" matInput placeholder="Email">
+        </mat-form-field>
+
+        <label class="text-danger" *ngIf="registerForm.controls['email'].hasError('email')">
+            Entrez une adresse email valide
+        </label>
+
+        <mat-form-field>
+            <input id="login" formControlName="login" name="login" matInput placeholder="Login" required="required">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput id="password" formControlName="password" placeholder="Mot de passe" [type]="hidePassword ? 'password' : 'text'" required="required">
+            <button type="button" mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+        <label
+            [ngClass]="registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('minlength')  ? 'text-danger' : 'text-success'">
+            <i class="material-icons">
+                {{ registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('minlength') ? 'cancel' : 'check_circle' }}
+            </i>
+            Le mot de passe doit faire minimum 8 caractères
+        </label>
+
+        <label
+            [ngClass]="registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('hasNumber')  ? 'text-danger' : 'text-success'">
+            <i class="material-icons">{{ registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('hasNumber') ? 'cancel' : 'check_circle' }}
+            </i>
+            Le mot de passe doit avoir au moins un chiffre
+        </label>
+
+        <label
+            [ngClass]="registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('hasCapitalCase')  ? 'text-danger' : 'text-success'">
+            <i class="material-icons">{{ registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('hasCapitalCase') ? 'cancel' : 'check_circle' }}
+            </i>
+            Le mot de passe doit avoir au moins une capitale
+        </label>
+
+        <label
+            [ngClass]="registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('hasSmallCase')  ? 'text-danger' : 'text-success'">
+            <i class="material-icons">{{ registerForm.controls['password'].hasError('required') || registerForm.controls['password'].hasError('hasSmallCase') ? 'cancel' : 'check_circle' }}
+            </i>
+            Le mot de passe doit avoir au moins une minuscule
+        </label>
+
+        <mat-form-field>
+            <input matInput id="confirmPassword" formControlName="confirmPassword"
+                placeholder="Confirmer le mot de passe" [type]="hideRepeatPassword ? 'password' : 'text'" required="required">
+            <button type="button" mat-icon-button matSuffix (click)="hideRepeatPassword = !hideRepeatPassword" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hideRepeatPassword">
+                <mat-icon>{{hideRepeatPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+
+        <label class="text-danger" *ngIf="registerForm.controls['confirmPassword'].hasError('NoPassswordMatch')">
+            Les mots de passe ne correspondent pas
+        </label>
+
+        <button id="btn-register" type="submit" mat-flat-button>S'inscrire</button>
+    </form>
+</mat-card>

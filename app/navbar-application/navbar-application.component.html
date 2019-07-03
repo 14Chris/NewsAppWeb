@@ -1,0 +1,24 @@
+<mat-toolbar class="mat-elevation-z5">
+  <fa-icon id="icon-app" class="fa-fw" [icon]="newsIcon"></fa-icon>
+  <span id="title">Application de news</span>
+
+  <div class="search-bar">
+    <input class="article-search" placeholder="Rechercher des articles..." value="{{search}}">
+    <button id="icon-search" class="mdc-icon-button material-icons search-button"
+      (click)="SearchArticle()">search</button>
+  </div>
+
+  <div *ngIf="user else signin">
+    <fa-icon id="icon-profil-utilisateur" class="fa-fw" [matMenuTriggerFor]="menu" [icon]="userIcon"></fa-icon>
+    <mat-menu id="menu-user" #menu="matMenu">
+      <span mat-menu-item>{{user.nom}} {{user.prenom}}</span>
+      <span mat-menu-item routerLink="/user/profile">Profil</span>
+      <span mat-menu-item (click)="Logout()">Déconnexion</span>
+    </mat-menu>
+  </div>
+  <ng-template #signin>
+    <button mat-flat-button routerLink="/login">Connexion</button>
+  </ng-template>
+
+
+</mat-toolbar>
