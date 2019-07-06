@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Article } from '../../Models/article';
-import { AuthenticationService } from '../../shared/services/authentication.service';
-import { ApiService } from '../../shared/services/api.service';
+import { AuthenticationService } from '../../services/authentication.service';
+import { ApiService } from '../../services/api.service';
 import { ArticleUser } from '../../Models/article-user';
 
 @Component({

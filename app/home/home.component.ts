@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone, NgModule } from '@angular/core';
-import { ApiService } from '../shared/services/api.service';
+import { ApiService } from '../services/api.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

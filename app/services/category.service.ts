@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EnvironmentUrlService } from './environment-url.service';
 import { ApiService } from './api.service';
-import {Category} from '../../Models/category'
+import {Category} from '../Models/category'
 import { Observable, Subject, BehaviorSubject, ReplaySubject } from 'rxjs';
 
 @Injectable({

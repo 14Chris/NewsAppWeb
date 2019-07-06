@@ -1,8 +1,8 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiService } from '../../shared/services/api.service';
+import { ApiService } from '../../services/api.service';
 import { Category } from '../../Models/category';
-import { CategoryService } from '../../shared/services/category.service';
+import { CategoryService } from '../../services/category.service';
 
 
 

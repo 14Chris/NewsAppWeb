@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { CustomValidator } from '../../custom-validator';
-import { ApiService } from '../../shared/services/api.service';
+import { ApiService } from '../../services/api.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-reset-password',

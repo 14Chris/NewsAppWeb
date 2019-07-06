@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from '../../Models/link';
 import { Category } from '../../Models/category';
-import { ApiService } from '../../shared/services/api.service';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-add-link',

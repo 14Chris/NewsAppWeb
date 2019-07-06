@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone, Input, SimpleChanges } from '@angular/core';
-import { ApiService } from '../../shared/services/api.service';
+import { ApiService } from '../../services/api.service';
 import { faEuroSign } from '@fortawesome/free-solid-svg-icons';
 import { faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
 import { faVolleyballBall } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +13,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import { ActivatedRoute } from '@angular/router';
-import { CategoryService } from '../../shared/services/category.service';
+import { CategoryService } from '../../services/category.service';
 import { Category } from '../../Models/category';
 
 @Component({

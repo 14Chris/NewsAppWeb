@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Router, RouteReuseStrategy } from '@angular/router';
-import { AuthenticationService } from '../shared/services/authentication.service';
-import { ApiService } from '../shared/services/api.service';
+import { AuthenticationService } from '../services/authentication.service';
+import { ApiService } from '../services/api.service';
 import { User } from '../Models/User';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
